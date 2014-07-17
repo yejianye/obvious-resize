@@ -27,23 +27,19 @@ set cpo&vim
 
 " Define obvious resize mappings
 if exists(':ObviousResizeLeft') != 2
-  command! -nargs=0 ObviousResizeLeft :call obviousresize#Resize('h')
-  nmap <unique> <script> <Plug>ObviousResizeLeft :ObviousResizeLeft<CR>
+  command! -nargs=1 ObviousResizeLeft :call obviousresize#Resize('h', <args>)
 endif
 
 if exists(':ObviousResizeRight') != 2
-  command! -nargs=0 ObviousResizeRight :call obviousresize#Resize('l')
-  nmap <unique> <script> <Plug>ObviousResizeRight :ObviousResizeRight<CR>
+  command! -nargs=1 ObviousResizeRight :call obviousresize#Resize('l', <args>)
 endif
 
 if exists(':ObviousResizeUp') != 2
-  command! -nargs=0 ObviousResizeUp :call obviousresize#Resize('k')
-  nmap <unique> <script> <Plug>ObviousResizeUp :ObviousResizeUp<CR>
+  command! -nargs=1 ObviousResizeUp :call obviousresize#Resize('k', <args>)
 endif
 
 if exists(':ObviousResizeDown') != 2
-  command! -nargs=0 ObviousResizeDown :call obviousresize#Resize('j')
-  nmap <unique> <script> <Plug>ObviousResizeDown :ObviousResizeDown<CR>
+  command! -nargs=1 ObviousResizeDown :call obviousresize#Resize('j', <args>)
 endif
 
 " Restore compatibility flag
